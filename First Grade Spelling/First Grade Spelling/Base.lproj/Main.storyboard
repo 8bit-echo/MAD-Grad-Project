@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -23,12 +23,14 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coins" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-V6-OoL">
                                         <rect key="frame" x="30" y="27" width="40" height="42"/>
+                                        <animations/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="20" y="38" width="25" height="42"/>
                                         </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-Sq-jUC">
                                         <rect key="frame" x="248" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zrF-Sq-jUC" secondAttribute="height" multiplier="1:1" id="Rxv-5o-Lr2"/>
                                             <constraint firstAttribute="height" constant="20" id="sSg-zJ-FnF"/>
@@ -49,6 +51,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="uWQ-PG-IzY">
                                         <rect key="frame" x="338" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uWQ-PG-IzY" secondAttribute="height" multiplier="1:1" id="Ati-c7-H7n"/>
                                             <constraint firstAttribute="height" constant="20" id="Tms-EH-tAF"/>
@@ -69,12 +72,14 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-BO-z4T">
                                         <rect key="frame" x="567" y="41" width="35" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="## words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-B6-Kef">
                                         <rect key="frame" x="78" y="40" width="80" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -84,6 +89,7 @@
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="DND-LE-qg7">
                                         <rect key="frame" x="293" y="34" width="37" height="36"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="BR1-jT-leE"/>
                                             <constraint firstAttribute="width" secondItem="DND-LE-qg7" secondAttribute="height" multiplier="37:36" id="VBc-QM-gUg"/>
@@ -104,6 +110,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-Gn-z1v">
                                         <rect key="frame" x="522" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="3Bh-i0-F0X"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="52X-Fz-ixE"/>
@@ -127,6 +134,7 @@
                                         </variation>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.61960784313725492" green="0.76078431372549016" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="MHa-Gn-z1v" firstAttribute="centerY" secondItem="mCa-BO-z4T" secondAttribute="centerY" id="0QN-dr-fKV"/>
@@ -187,6 +195,7 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="5Qb-W4-K0R">
                                 <rect key="frame" x="427" y="187" width="226" height="226"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="C4z-27-Bbz"/>
                                     <constraint firstAttribute="width" constant="130" id="MLz-fx-QQm">
@@ -229,6 +238,7 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-kA-n3M">
                                 <rect key="frame" x="187" y="187" width="226" height="226"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="7Av-NC-svR">
                                         <variation key="widthClass=compact" constant="125"/>
@@ -275,6 +285,7 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="JnY-gr-3S1">
                                 <rect key="frame" x="-53" y="187" width="226" height="226"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="9TK-7u-g6L"/>
                                     <constraint firstAttribute="width" constant="200" id="9wK-fP-izJ"/>
@@ -328,6 +339,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-Ie-gS2">
                                 <rect key="frame" x="266" y="88" width="67" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KdR-40-2eT"/>
                                     <constraint firstAttribute="width" constant="67" id="TBg-q1-8q6"/>
@@ -343,6 +355,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-ee-UXD">
                                 <rect key="frame" x="446" y="272" width="189" height="55"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="OZh-RQ-OWm"/>
                                     <constraint firstAttribute="height" constant="55" id="eIe-oL-aAf"/>
@@ -361,6 +374,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvY-w6-3mD">
                                 <rect key="frame" x="-34" y="272" width="189" height="55"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="PAt-RR-3Ct"/>
                                     <constraint firstAttribute="width" constant="189" id="PWj-dD-xYj"/>
@@ -381,6 +395,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzG-jF-f8V">
                                 <rect key="frame" x="206" y="272" width="189" height="55"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="7Jg-CI-9bY"/>
                                     <constraint firstAttribute="height" constant="55" id="7bD-tU-ff1"/>
@@ -395,6 +410,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.10924654725513953" green="0.34594555212886885" blue="0.43615683489304813" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PvY-w6-3mD" firstAttribute="leading" secondItem="oBV-ee-UXD" secondAttribute="leading" id="08l-zr-VG7"/>
@@ -505,28 +521,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="4bk-xN-4si"/>
-                                <exclude reference="C8O-u4-gwv"/>
-                                <exclude reference="Cbj-UR-h6J"/>
-                                <exclude reference="Hsn-Jh-fnn"/>
-                                <exclude reference="Pnu-If-qzv"/>
-                                <exclude reference="ThP-fU-o18"/>
-                                <exclude reference="Zoh-Ze-jyU"/>
-                                <exclude reference="cHs-mc-Zso"/>
-                                <exclude reference="iyc-bo-3QT"/>
-                                <exclude reference="ooi-Nw-hwf"/>
-                                <exclude reference="pqQ-jz-U2H"/>
-                                <exclude reference="qkX-ML-XsG"/>
-                                <exclude reference="zUf-oP-65z"/>
-                                <exclude reference="3qe-0X-xew"/>
-                                <exclude reference="55e-SX-pIe"/>
-                                <exclude reference="8pU-dY-3Hh"/>
-                                <exclude reference="G1Q-5D-S02"/>
-                                <exclude reference="KsU-aB-LNH"/>
-                                <exclude reference="TbN-cO-QHS"/>
-                                <exclude reference="mJz-v2-qWL"/>
-                                <exclude reference="rKN-FR-7wS"/>
-                                <exclude reference="y5d-j6-pQ5"/>
                                 <exclude reference="4ai-fa-2lZ"/>
                                 <exclude reference="5Hq-u2-hJa"/>
                                 <exclude reference="CmU-IR-SdA"/>
@@ -546,16 +540,32 @@
                                 <exclude reference="mc8-j3-HAG"/>
                                 <exclude reference="rPi-fX-AQ7"/>
                                 <exclude reference="swh-5t-C00"/>
-                                <exclude reference="SZk-mb-lEL"/>
-                                <exclude reference="U5G-n3-zZg"/>
-                                <exclude reference="chT-0U-C6U"/>
-                                <exclude reference="nHI-ud-Kew"/>
-                                <exclude reference="qJI-vQ-Pmo"/>
-                                <exclude reference="ywS-rv-knp"/>
+                                <exclude reference="4bk-xN-4si"/>
+                                <exclude reference="C8O-u4-gwv"/>
+                                <exclude reference="Cbj-UR-h6J"/>
+                                <exclude reference="Hsn-Jh-fnn"/>
+                                <exclude reference="Pnu-If-qzv"/>
+                                <exclude reference="ThP-fU-o18"/>
+                                <exclude reference="Zoh-Ze-jyU"/>
+                                <exclude reference="cHs-mc-Zso"/>
+                                <exclude reference="iyc-bo-3QT"/>
+                                <exclude reference="ooi-Nw-hwf"/>
+                                <exclude reference="pqQ-jz-U2H"/>
+                                <exclude reference="qkX-ML-XsG"/>
+                                <exclude reference="zUf-oP-65z"/>
                                 <exclude reference="08l-zr-VG7"/>
                                 <exclude reference="59c-ak-jSk"/>
                                 <exclude reference="AQP-Gg-0gy"/>
                                 <exclude reference="Kal-Yh-oFg"/>
+                                <exclude reference="3qe-0X-xew"/>
+                                <exclude reference="55e-SX-pIe"/>
+                                <exclude reference="8pU-dY-3Hh"/>
+                                <exclude reference="G1Q-5D-S02"/>
+                                <exclude reference="KsU-aB-LNH"/>
+                                <exclude reference="TbN-cO-QHS"/>
+                                <exclude reference="mJz-v2-qWL"/>
+                                <exclude reference="rKN-FR-7wS"/>
+                                <exclude reference="y5d-j6-pQ5"/>
                                 <exclude reference="1Tg-tu-Hlv"/>
                                 <exclude reference="2eR-YT-4Fi"/>
                                 <exclude reference="EzS-ps-IFC"/>
@@ -572,11 +582,21 @@
                                 <exclude reference="qb3-At-Khr"/>
                                 <exclude reference="u96-PP-nrf"/>
                                 <exclude reference="vhM-Xy-PjF"/>
+                                <exclude reference="SZk-mb-lEL"/>
+                                <exclude reference="U5G-n3-zZg"/>
+                                <exclude reference="chT-0U-C6U"/>
+                                <exclude reference="nHI-ud-Kew"/>
+                                <exclude reference="qJI-vQ-Pmo"/>
+                                <exclude reference="ywS-rv-knp"/>
                                 <exclude reference="cVw-LX-P9k"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <exclude reference="FcU-w9-tYi"/>
+                                <exclude reference="Tt0-3a-dwM"/>
+                                <exclude reference="hdb-Ql-FV4"/>
+                                <include reference="swh-5t-C00"/>
                                 <exclude reference="6BF-X6-0ZQ"/>
                                 <include reference="C8O-u4-gwv"/>
                                 <exclude reference="Hsn-Jh-fnn"/>
@@ -588,18 +608,12 @@
                                 <include reference="ooi-Nw-hwf"/>
                                 <exclude reference="pqQ-jz-U2H"/>
                                 <exclude reference="zUf-oP-65z"/>
+                                <exclude reference="hhV-1h-ccz"/>
                                 <exclude reference="G1Q-5D-S02"/>
                                 <include reference="KsU-aB-LNH"/>
                                 <include reference="TbN-cO-QHS"/>
                                 <exclude reference="rKN-FR-7wS"/>
                                 <exclude reference="y5d-j6-pQ5"/>
-                                <exclude reference="FcU-w9-tYi"/>
-                                <exclude reference="Tt0-3a-dwM"/>
-                                <exclude reference="hdb-Ql-FV4"/>
-                                <include reference="swh-5t-C00"/>
-                                <exclude reference="hnH-f5-7ho"/>
-                                <exclude reference="ywS-rv-knp"/>
-                                <exclude reference="hhV-1h-ccz"/>
                                 <exclude reference="EzS-ps-IFC"/>
                                 <exclude reference="RkE-AV-TV2"/>
                                 <exclude reference="VSO-vM-8b6"/>
@@ -608,18 +622,12 @@
                                 <exclude reference="dWF-ti-CFm"/>
                                 <exclude reference="kMG-oj-Zv9"/>
                                 <exclude reference="qMW-qG-UF7"/>
+                                <exclude reference="hnH-f5-7ho"/>
+                                <exclude reference="ywS-rv-knp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="6BF-X6-0ZQ"/>
-                                <exclude reference="Cbj-UR-h6J"/>
-                                <exclude reference="ebJ-d6-RWI"/>
-                                <exclude reference="qkX-ML-XsG"/>
-                                <exclude reference="55e-SX-pIe"/>
-                                <include reference="8pU-dY-3Hh"/>
-                                <exclude reference="Ney-v3-bgY"/>
-                                <exclude reference="d7p-fY-Mcn"/>
                                 <include reference="4ai-fa-2lZ"/>
                                 <exclude reference="CmU-IR-SdA"/>
                                 <exclude reference="OTm-iy-abZ"/>
@@ -627,37 +635,35 @@
                                 <include reference="hin-H7-13h"/>
                                 <include reference="mc8-j3-HAG"/>
                                 <exclude reference="rPi-fX-AQ7"/>
+                                <exclude reference="6BF-X6-0ZQ"/>
+                                <exclude reference="Cbj-UR-h6J"/>
+                                <exclude reference="ebJ-d6-RWI"/>
+                                <exclude reference="qkX-ML-XsG"/>
+                                <exclude reference="59c-ak-jSk"/>
+                                <include reference="AQP-Gg-0gy"/>
+                                <include reference="Kal-Yh-oFg"/>
+                                <exclude reference="Px2-Sg-fcH"/>
+                                <exclude reference="hhV-1h-ccz"/>
+                                <exclude reference="55e-SX-pIe"/>
+                                <include reference="8pU-dY-3Hh"/>
+                                <exclude reference="Ney-v3-bgY"/>
+                                <exclude reference="d7p-fY-Mcn"/>
+                                <exclude reference="RkE-AV-TV2"/>
+                                <exclude reference="X4F-iY-cvs"/>
+                                <exclude reference="X4d-ya-jJJ"/>
+                                <include reference="btG-J3-rl1"/>
+                                <include reference="u96-PP-nrf"/>
                                 <exclude reference="U5G-n3-zZg"/>
                                 <exclude reference="chT-0U-C6U"/>
                                 <exclude reference="dOu-Q2-JTk"/>
                                 <exclude reference="hnH-f5-7ho"/>
                                 <include reference="nHI-ud-Kew"/>
                                 <include reference="qJI-vQ-Pmo"/>
-                                <exclude reference="59c-ak-jSk"/>
-                                <include reference="AQP-Gg-0gy"/>
-                                <include reference="Kal-Yh-oFg"/>
-                                <exclude reference="Px2-Sg-fcH"/>
-                                <exclude reference="hhV-1h-ccz"/>
-                                <exclude reference="RkE-AV-TV2"/>
-                                <exclude reference="X4F-iY-cvs"/>
-                                <exclude reference="X4d-ya-jJJ"/>
-                                <include reference="btG-J3-rl1"/>
-                                <include reference="u96-PP-nrf"/>
                                 <include reference="cVw-LX-P9k"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="4bk-xN-4si"/>
-                                <exclude reference="C8O-u4-gwv"/>
-                                <exclude reference="Pnu-If-qzv"/>
-                                <include reference="cHs-mc-Zso"/>
-                                <exclude reference="ooi-Nw-hwf"/>
-                                <exclude reference="3qe-0X-xew"/>
-                                <exclude reference="8pU-dY-3Hh"/>
-                                <exclude reference="KsU-aB-LNH"/>
-                                <exclude reference="TbN-cO-QHS"/>
-                                <exclude reference="mJz-v2-qWL"/>
                                 <exclude reference="4ai-fa-2lZ"/>
                                 <exclude reference="5Hq-u2-hJa"/>
                                 <include reference="Gyz-A7-6zw"/>
@@ -671,11 +677,19 @@
                                 <include reference="mQb-yb-dxf"/>
                                 <exclude reference="mc8-j3-HAG"/>
                                 <exclude reference="swh-5t-C00"/>
-                                <exclude reference="SZk-mb-lEL"/>
-                                <exclude reference="nHI-ud-Kew"/>
+                                <include reference="4bk-xN-4si"/>
+                                <exclude reference="C8O-u4-gwv"/>
+                                <exclude reference="Pnu-If-qzv"/>
+                                <include reference="cHs-mc-Zso"/>
+                                <exclude reference="ooi-Nw-hwf"/>
                                 <exclude reference="08l-zr-VG7"/>
                                 <exclude reference="AQP-Gg-0gy"/>
                                 <exclude reference="Kal-Yh-oFg"/>
+                                <exclude reference="3qe-0X-xew"/>
+                                <exclude reference="8pU-dY-3Hh"/>
+                                <exclude reference="KsU-aB-LNH"/>
+                                <exclude reference="TbN-cO-QHS"/>
+                                <exclude reference="mJz-v2-qWL"/>
                                 <include reference="1Tg-tu-Hlv"/>
                                 <exclude reference="2eR-YT-4Fi"/>
                                 <include reference="FdB-CY-qVw"/>
@@ -685,6 +699,8 @@
                                 <include reference="qb3-At-Khr"/>
                                 <exclude reference="u96-PP-nrf"/>
                                 <exclude reference="vhM-Xy-PjF"/>
+                                <exclude reference="SZk-mb-lEL"/>
+                                <exclude reference="nHI-ud-Kew"/>
                                 <exclude reference="cVw-LX-P9k"/>
                             </mask>
                         </variation>
@@ -719,6 +735,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-Bq-qzo">
                                         <rect key="frame" x="248" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="DoV-Ln-YQY"/>
                                             <constraint firstAttribute="width" secondItem="Z06-Bq-qzo" secondAttribute="height" multiplier="1:1" id="kP1-mc-E7e"/>
@@ -739,6 +756,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-hb-4d5">
                                         <rect key="frame" x="293" y="34" width="37" height="36"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="JMp-3n-MBT"/>
                                             <constraint firstAttribute="width" secondItem="5lO-hb-4d5" secondAttribute="height" multiplier="37:36" id="TUX-jz-KfC"/>
@@ -760,6 +778,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="WsX-YM-tR0">
                                         <rect key="frame" x="338" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="7Oz-If-LJR"/>
                                             <constraint firstAttribute="height" constant="20" id="s6k-YH-wGF"/>
@@ -779,18 +798,21 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0S-89-pzm">
                                         <rect key="frame" x="568" y="41" width="35" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="## words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w4-y2-oHP">
                                         <rect key="frame" x="81" y="40" width="72" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="mz8-M0-2Hv">
                                         <rect key="frame" x="523" y="33" width="37" height="39"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="9oq-7P-USN"/>
                                             <constraint firstAttribute="width" constant="37" id="bET-N5-WNu"/>
@@ -815,6 +837,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coins" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-bC-cUH">
                                         <rect key="frame" x="27" y="27" width="40" height="42"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="MrE-pQ-R7N">
                                                 <variation key="widthClass=compact" constant="38"/>
@@ -835,6 +858,7 @@
                                         </variation>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.27058823529411763" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="4w4-y2-oHP" secondAttribute="bottom" constant="8" id="7bI-xJ-6IF"/>
@@ -902,6 +926,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAD-Uc-f4M">
                                 <rect key="frame" x="263" y="263" width="75" height="75"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.61960784310000006" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -924,6 +949,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QO-In-Mt6">
                                 <rect key="frame" x="74" y="256" width="80" height="88"/>
+                                <animations/>
                                 <state key="normal" image="speaker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -933,6 +959,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-om-RUD">
                                 <rect key="frame" x="267" y="88" width="67" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="JB7-Qz-rqB"/>
                                     <constraint firstAttribute="height" constant="30" id="Kjg-cS-2Js"/>
@@ -948,6 +975,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-jS-clV">
                                 <rect key="frame" x="353" y="263" width="75" height="75"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.61960784310000006" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -970,6 +998,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-uY-R4H">
                                 <rect key="frame" x="443" y="263" width="75" height="75"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.61960784310000006" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -992,6 +1021,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idm-Jp-K8X">
                                 <rect key="frame" x="173" y="263" width="75" height="75"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.61960784310000006" green="0.76078431369999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1021,6 +1051,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.18035164931159411" green="0.68560317555897132" blue="0.71895424836601296" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="6QO-In-Mt6" secondAttribute="centerX" id="2nc-e5-jw4"/>
@@ -1194,6 +1225,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2B-97-UmM">
                                 <rect key="frame" x="83" y="256" width="80" height="88"/>
+                                <animations/>
                                 <state key="normal" image="speaker">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1204,6 +1236,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-lI-ZAI">
                                 <rect key="frame" x="267" y="88" width="67" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="67" id="0DT-PJ-2eX"/>
                                     <constraint firstAttribute="height" constant="30" id="3xt-6t-yOn"/>
@@ -1222,6 +1255,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coins" translatesAutoresizingMaskIntoConstraints="NO" id="c1R-dS-i65">
                                         <rect key="frame" x="27" y="28" width="40" height="42"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="18U-qL-EoQ"/>
                                             <constraint firstAttribute="height" constant="38" id="qgN-Yh-bFj"/>
@@ -1241,6 +1275,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-aq-j9A">
                                         <rect key="frame" x="248" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="9Mr-Hq-DcO"/>
                                             <constraint firstAttribute="width" constant="20" id="q1f-Cs-FUM"/>
@@ -1260,6 +1295,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="onB-X6-p7U">
                                         <rect key="frame" x="338" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Cfv-iI-sSA"/>
                                             <constraint firstAttribute="height" constant="20" id="PIf-6x-KME"/>
@@ -1279,6 +1315,7 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="OG3-sl-T9T">
                                         <rect key="frame" x="518" y="32" width="37" height="37"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="7b5-0g-9v7"/>
                                             <constraint firstAttribute="height" constant="20" id="Mpy-gx-Xwf"/>
@@ -1306,12 +1343,14 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-De-cBs">
                                         <rect key="frame" x="563" y="41" width="35" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="jng-0P-QPQ">
                                         <rect key="frame" x="293" y="33" width="37" height="36"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="9I3-GF-7FR"/>
                                             <constraint firstAttribute="width" constant="20" id="axa-4w-336"/>
@@ -1331,11 +1370,13 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="## words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k2-4N-Vom">
                                         <rect key="frame" x="81" y="40" width="72" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.16078431372549021" green="0.63137254901960782" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="jng-0P-QPQ" secondAttribute="bottom" constant="8" id="2Wd-dM-huo"/>
@@ -1433,6 +1474,7 @@
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivg-gD-POo">
                                 <rect key="frame" x="183" y="285" width="235" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="235" id="hkE-1j-XDO"/>
                                 </constraints>
@@ -1443,6 +1485,7 @@
                                 </connections>
                             </textField>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.67950139435304924" green="0.79198441213606663" blue="0.20841751185657839" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="j3I-HD-9b7" firstAttribute="leading" secondItem="ivd-Mq-UyA" secondAttribute="leadingMargin" constant="-27" id="5sj-rN-sln"/>
@@ -1515,6 +1558,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

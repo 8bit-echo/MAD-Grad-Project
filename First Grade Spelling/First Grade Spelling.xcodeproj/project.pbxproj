@@ -166,6 +166,7 @@
 		57BB645D1BD41F4A00990F2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Megan Leahy";
 				TargetAttributes = {
@@ -423,6 +424,7 @@
 				57BB64881BD41F4A00990F2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57BB64891BD41F4A00990F2A /* Build configuration list for PBXNativeTarget "First Grade SpellingTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +433,7 @@
 				57BB648B1BD41F4A00990F2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
