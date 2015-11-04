@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		577A33EE1BEAABC6001FE91D /* SpellingWords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 577A33ED1BEAABC6001FE91D /* SpellingWords.plist */; };
 		57BB646B1BD41F4A00990F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB646A1BD41F4A00990F2A /* AppDelegate.swift */; };
 		57BB646D1BD41F4A00990F2A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB646C1BD41F4A00990F2A /* FirstViewController.swift */; };
 		57BB646F1BD41F4A00990F2A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB646E1BD41F4A00990F2A /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		577A33ED1BEAABC6001FE91D /* SpellingWords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpellingWords.plist; sourceTree = "<group>"; };
 		57BB64651BD41F4A00990F2A /* First Grade Spelling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Grade Spelling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BB64691BD41F4A00990F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57BB646A1BD41F4A00990F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				57BB64731BD41F4A00990F2A /* Images.xcassets */,
 				57BB64751BD41F4A00990F2A /* LaunchScreen.xib */,
 				57BB64681BD41F4A00990F2A /* Supporting Files */,
+				577A33ED1BEAABC6001FE91D /* SpellingWords.plist */,
 			);
 			path = "First Grade Spelling";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				57BB64721BD41F4A00990F2A /* Main.storyboard in Resources */,
 				57BB64771BD41F4A00990F2A /* LaunchScreen.xib in Resources */,
+				577A33EE1BEAABC6001FE91D /* SpellingWords.plist in Resources */,
 				57BB64741BD41F4A00990F2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

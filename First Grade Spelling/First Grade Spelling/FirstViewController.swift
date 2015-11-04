@@ -25,13 +25,31 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func startButton(sender: UIButton) {
+        chooseWord()
     }
+    
+    var wordInfo = NSDictionary()
+    var word = [String: [String: String]]()
+    var words = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // gets the words (arrays) from the plist
+        let path = NSBundle.mainBundle().pathForResource("SpellingWords", ofType: "plist")!
+        wordInfo = NSDictionary(contentsOfFile: path)!
+        words = sorted(wordInfo.allKeys as! [String])
+        println(words)
     }
 
+    func chooseWord() {
+        var randomIndex = Int(arc4random_uniform(UInt32(words.count)))
+        println(words[randomIndex])
+        
+        // now we need a way to get to the strings in the "word" dictionary
+        // also need to assign the BOOL to true when the word has been choosen so it can't be choosen again
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
