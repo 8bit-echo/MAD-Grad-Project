@@ -30,6 +30,7 @@ class SpellingWord {
             //Play sound for bad
             lives = lives - 1
             hasBeenUsed = true
+            
         }
     }
 }
@@ -39,6 +40,7 @@ let spellCat = SpellingWord(correctSpelling: "Cat", incorrectSpelling: "Catt", a
 let spellJump = SpellingWord(correctSpelling: "jump", incorrectSpelling: "gump", altIncorrectSpelling: "jomp", hasBeenUsed: false)
 let spellDog = SpellingWord(correctSpelling: "Dog", incorrectSpelling: "dogg", altIncorrectSpelling: "bog", hasBeenUsed: false)
 let spellFish = SpellingWord(correctSpelling: "fish", incorrectSpelling: "fesh", altIncorrectSpelling: "fiss", hasBeenUsed: false)
+
 
 
 //Set up the dictionary
@@ -58,19 +60,21 @@ func chooseWord()  -> SpellingWord {
     
     let randomIndex = Int(arc4random_uniform(UInt32(myDictionaryArray.count)))
     let randomItem = myDictionaryArray[randomIndex]
+    
     return randomItem
 }
 
-
 var currentGameWord = chooseWord()
+
+while currentGameWord.hasBeenUsed == true {
+    currentGameWord = chooseWord()
+}
+
+println(currentGameWord.correctSpelling)
 
 
 //When it gets to this point it has now chosen a random word from the list and stored it in the variable "currrentGameWord"
 //Now we can modify any of its properties or methods based on the user Interface
-
-
-currentGameWord.correctWordWasChosen(true)
-
 
 
 //Print results to the console
