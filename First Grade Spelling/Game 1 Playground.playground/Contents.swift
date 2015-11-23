@@ -20,19 +20,19 @@ class SpellingWord {
         self.hasBeenUsed = hasBeenUsed
     }
     
-    //pass a Bool value into the function to determine what happens next.
-    func correctWordWasChosen(correct : Bool){
-        if correct{
-            //Play sound for good
-            score = ++score
-            hasBeenUsed = true
-        }else{
-            //Play sound for bad
-            lives = lives - 1
-            hasBeenUsed = true
-            
-        }
-    }
+//    //pass a Bool value into the function to determine what happens next.
+//    func correctWordWasChosen(correct : Bool){
+//        if correct{
+//            //Play sound for good
+//            score = ++score
+//            hasBeenUsed = true
+//        }else{
+//            //Play sound for bad
+//            lives = lives - 1
+//            hasBeenUsed = true
+//            
+//        }
+//    }
 }
 
 // Create the new objects
@@ -75,6 +75,7 @@ println(currentGameWord.correctSpelling)
 
 //When it gets to this point it has now chosen a random word from the list and stored it in the variable "currrentGameWord"
 //Now we can modify any of its properties or methods based on the user Interface
+
 
 
 //Print results to the console

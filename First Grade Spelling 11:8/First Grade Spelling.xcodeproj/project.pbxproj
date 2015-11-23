@@ -17,6 +17,7 @@
 		57BB64831BD41F4A00990F2A /* First_Grade_SpellingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB64821BD41F4A00990F2A /* First_Grade_SpellingTests.swift */; };
 		57BB648D1BD4468200990F2A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BB648C1BD4468200990F2A /* AVFoundation.framework */; };
 		57BB648F1BD44ACE00990F2A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */; };
+		F0694EAC1BEFFC8500B100E0 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0694EAB1BEFFC8500B100E0 /* WordEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		57BB64821BD41F4A00990F2A /* First_Grade_SpellingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_Grade_SpellingTests.swift; sourceTree = "<group>"; };
 		57BB648C1BD4468200990F2A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F0694EAB1BEFFC8500B100E0 /* WordEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		57BB64671BD41F4A00990F2A /* First Grade Spelling */ = {
 			isa = PBXGroup;
 			children = (
+				F0694EAB1BEFFC8500B100E0 /* WordEngine.swift */,
 				57BB646A1BD41F4A00990F2A /* AppDelegate.swift */,
 				57BB646C1BD41F4A00990F2A /* FirstViewController.swift */,
 				57BB646E1BD41F4A00990F2A /* SecondViewController.swift */,
@@ -169,6 +172,7 @@
 		57BB645D1BD41F4A00990F2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Megan Leahy";
 				TargetAttributes = {
@@ -227,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BB646F1BD41F4A00990F2A /* SecondViewController.swift in Sources */,
+				F0694EAC1BEFFC8500B100E0 /* WordEngine.swift in Sources */,
 				57BB646B1BD41F4A00990F2A /* AppDelegate.swift in Sources */,
 				57BB648F1BD44ACE00990F2A /* ThirdViewController.swift in Sources */,
 				57BB646D1BD41F4A00990F2A /* FirstViewController.swift in Sources */,
@@ -371,6 +376,7 @@
 				INFOPLIST_FILE = "First Grade Spelling/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};

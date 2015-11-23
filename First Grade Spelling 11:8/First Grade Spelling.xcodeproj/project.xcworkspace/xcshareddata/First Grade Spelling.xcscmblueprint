@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93C79D57BD08111AA6F11F9AF01233F065C9063A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93C79D57BD08111AA6F11F9AF01233F065C9063A" : 0,
+    "A078AC243CACC6A8E3B269EC3EA6A8B897998649" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "756AC5E6-461B-437A-B0DC-FBF3968020AE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93C79D57BD08111AA6F11F9AF01233F065C9063A" : "MAD-Grad-Project",
+    "A078AC243CACC6A8E3B269EC3EA6A8B897998649" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "First Grade Spelling",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "First Grade Spelling 11:8\/First Grade Spelling.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dick-ey\/MAD-Grad-Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93C79D57BD08111AA6F11F9AF01233F065C9063A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dick-ey\/Mobile-App-Dev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A078AC243CACC6A8E3B269EC3EA6A8B897998649"
+    }
+  ]
+}

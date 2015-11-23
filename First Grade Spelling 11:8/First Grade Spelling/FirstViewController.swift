@@ -8,6 +8,18 @@
 
 import UIKit
 
+
+var myDictionaryArray = [SpellingWord]()
+
+
+func chooseWord()  -> SpellingWord {
+    
+    let randomIndex = Int(arc4random_uniform(UInt32(myDictionaryArray.count)))
+    let randomItem = myDictionaryArray[randomIndex]
+    
+    return randomItem
+}
+
 class FirstViewController: UIViewController {
     
     // for the timer
@@ -16,6 +28,11 @@ class FirstViewController: UIViewController {
     var startTimeDate = NSDate()
     var elapsedTime = NSTimeInterval()
     var elapsedTimeDate = NSDate()
+    
+    
+    @IBOutlet weak var wordOneText: UIButton!
+    @IBOutlet weak var wordTwoText: UIButton!
+    @IBOutlet weak var wordThreeText: UIButton!
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
@@ -32,6 +49,12 @@ class FirstViewController: UIViewController {
     }
     
     @IBOutlet weak var startIcon: UIButton!
+    
+    @IBOutlet weak var wordOneLabel: UIButton!
+    @IBOutlet weak var wordTwoLabel: UIButton!
+    @IBOutlet weak var wordThreeLabel: UIButton!
+    
+    
     @IBAction func startButton(sender: UIButton) {
         var buttonLabel = sender as UIButton
         if !timer.valid {
@@ -56,6 +79,18 @@ class FirstViewController: UIViewController {
     }
     
     
+
+    
+    var currentGameWord = chooseWord()
+    
+    
+    
+    
+    
+    
+
+
+    
     func updateTime() {
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
@@ -75,6 +110,24 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         timerLabel.text = "00:00"
         super.viewDidLoad()
+        
+        // Create the new objects
+        let spellCat = SpellingWord(correctSpelling: "Cat", incorrectSpelling: "Catt", altIncorrectSpelling: "kat", hasBeenUsed: false)
+        let spellJump = SpellingWord(correctSpelling: "jump", incorrectSpelling: "gump", altIncorrectSpelling: "jomp", hasBeenUsed: false)
+        let spellDog = SpellingWord(correctSpelling: "Dog", incorrectSpelling: "dogg", altIncorrectSpelling: "bog", hasBeenUsed: false)
+        let spellFish = SpellingWord(correctSpelling: "fish", incorrectSpelling: "fesh", altIncorrectSpelling: "fiss", hasBeenUsed: false)
+        
+        
+        //Add to Dictionary
+        myDictionaryArray.append(spellCat)
+        myDictionaryArray.append(spellJump)
+        myDictionaryArray.append(spellDog)
+        myDictionaryArray.append(spellFish)
+        
+        chooseWord()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
