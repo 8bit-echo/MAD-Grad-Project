@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+>>>>>>> origin/master
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -24,6 +28,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coins" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-V6-OoL">
                                         <rect key="frame" x="22" y="30" width="40" height="42"/>
                                         <animations/>
+<<<<<<< HEAD
+=======
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="12" y="0.0" width="40" height="42"/>
+                                        </variation>
+>>>>>>> origin/master
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-Sq-jUC">
                                         <rect key="frame" x="248" y="32" width="37" height="37"/>
@@ -90,8 +100,13 @@
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="constraints">
+<<<<<<< HEAD
                                                 <exclude reference="BR1-jT-leE"/>
                                                 <exclude reference="Zu5-xc-EqR"/>
+=======
+                                                <include reference="BR1-jT-leE"/>
+                                                <include reference="Zu5-xc-EqR"/>
+>>>>>>> origin/master
                                             </mask>
                                         </variation>
                                     </imageView>
@@ -126,6 +141,12 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+<<<<<<< HEAD
+=======
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="12" y="0.0" width="72" height="21"/>
+                                        </variation>
+>>>>>>> origin/master
                                     </label>
                                 </subviews>
                                 <animations/>
@@ -134,7 +155,10 @@
                                     <constraint firstItem="MHa-Gn-z1v" firstAttribute="centerY" secondItem="mCa-BO-z4T" secondAttribute="centerY" id="0QN-dr-fKV"/>
                                     <constraint firstAttribute="bottom" secondItem="mCa-BO-z4T" secondAttribute="bottom" constant="8" id="9up-OR-lvO"/>
                                     <constraint firstAttribute="bottom" secondItem="DND-LE-qg7" secondAttribute="bottom" constant="6" id="A9w-ay-7Z3"/>
+<<<<<<< HEAD
                                     <constraint firstAttribute="bottom" secondItem="zrF-Sq-jUC" secondAttribute="bottom" constant="6" id="CWI-Qq-YiT"/>
+=======
+>>>>>>> origin/master
                                     <constraint firstItem="zrF-Sq-jUC" firstAttribute="centerY" secondItem="uWQ-PG-IzY" secondAttribute="centerY" id="D3Y-cV-jaA"/>
                                     <constraint firstAttribute="trailing" secondItem="MHa-Gn-z1v" secondAttribute="trailing" constant="64" id="Ku0-nL-MTq"/>
                                     <constraint firstItem="MHa-Gn-z1v" firstAttribute="top" secondItem="uWQ-PG-IzY" secondAttribute="top" id="NqZ-L6-6w5"/>
@@ -161,7 +185,10 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <exclude reference="CWI-Qq-YiT"/>
+=======
+>>>>>>> origin/master
                                         <exclude reference="D3Y-cV-jaA"/>
                                         <exclude reference="vHw-hp-wta"/>
                                         <exclude reference="A9w-ay-7Z3"/>
@@ -174,7 +201,10 @@
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
+<<<<<<< HEAD
                                         <include reference="CWI-Qq-YiT"/>
+=======
+>>>>>>> origin/master
                                         <include reference="D3Y-cV-jaA"/>
                                         <include reference="vHw-hp-wta"/>
                                         <exclude reference="zjU-Bp-yEh"/>

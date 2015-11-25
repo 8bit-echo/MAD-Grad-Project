@@ -164,7 +164,11 @@ class FirstViewController: UIViewController {
         //create the words for the dictionary
         let spellCat = SpellingWord(correctSpelling: "cat", incorrectSpelling: "kat", altIncorrectSpelling: "catt", hasBeenUsed: false)
         let spellJump = SpellingWord(correctSpelling: "jump", incorrectSpelling: "gump", altIncorrectSpelling: "jomp", hasBeenUsed: false)
+<<<<<<< HEAD
         let spellDog = SpellingWord(correctSpelling: "dog", incorrectSpelling: "dogg", altIncorrectSpelling: "bog", hasBeenUsed: false)
+=======
+        let spellDog = SpellingWord(correctSpelling: "Dog", incorrectSpelling: "dogg", altIncorrectSpelling: "bog", hasBeenUsed: false)
+>>>>>>> origin/master
         let spellFish = SpellingWord(correctSpelling: "fish", incorrectSpelling: "fesh", altIncorrectSpelling: "fiss", hasBeenUsed: false)
         
         // add words to the dictionary
