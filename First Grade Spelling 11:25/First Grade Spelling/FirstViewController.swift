@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 var myDictionaryArray = [SpellingWord]()
 
@@ -46,11 +47,14 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var wordTwoLabel: UIButton!
     @IBOutlet weak var wordThreeLabel: UIButton!
     @IBOutlet weak var startIcon: UIButton!
+    @IBOutlet weak var hidderView: UIView!
     
-    
+    var audioPlayer: AVAudioPlayer?
+  
     
     // Begins the game and chooses a new word to display
     @IBAction func startButton(sender: UIButton) {
+        hidderView.hidden = true
         var buttonLabel = sender as UIButton
         if !timer.valid {
             let aSelector : Selector = "updateTime"
@@ -69,6 +73,7 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             
             // pause the game
+            hidderView.hidden = false
         }
         updateWords()
         
@@ -92,9 +97,19 @@ class FirstViewController: UIViewController {
             lives -= 1
             updateLives()
             println("incorrect value chosen")
+           /* commented these out so that the user has to get the correct answer before moving on to the next word
             currentGameWord = chooseWord()
-            updateWords()
+            updateWords() */
             currentGameWord.hasBeenUsed = true
+            
+            //play wrong answer sound
+            let audioFilePath = NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")
+            let fileURL = NSURL(fileURLWithPath: audioFilePath!)
+            audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+            if audioPlayer != nil{
+                audioPlayer!.play()
+            }
+
         }
         
        /* while currentGameWord.hasBeenUsed == true {
@@ -106,15 +121,44 @@ class FirstViewController: UIViewController {
     
 
     //update the words that are displayed in the bubbles
-    func updateWords() {
+ /*   func updateWords() {
         wordOneLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
         wordTwoLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
         wordThreeLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
         println("updateWords() has just finished running")
+       // chooseButton()
+    } */
+    
+    
+    
+    func updateWords() {
+        //choose a random number between 1 and 3
+        var randomNumber = arc4random_uniform(3) + 1
         
+        // just for testing
+        var randomNumberString = String(randomNumber)
+        println("random number: " + randomNumberString)
         
-
+        switch randomNumber{
+        case 1:
+            wordOneLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
+            wordTwoLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
+            wordThreeLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
+        case 2:
+            wordOneLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
+            wordTwoLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
+            wordThreeLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
+        case 3:
+            wordOneLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
+            wordTwoLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
+            wordThreeLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
+        default:
+            break
+        }
+        println("updateWords() has just finished running")
     }
+
+    
     
     //Timer begins counting
     func updateTime() {
@@ -153,6 +197,7 @@ class FirstViewController: UIViewController {
             life3.image = UIImage(named: "empty.png")
             println("game over")
             //stop the timer somehow
+            endGame()
         default:
             break
         }
@@ -161,8 +206,16 @@ class FirstViewController: UIViewController {
         println(lives)
     }
 
+    func endGame(){
+        println("endGame function just finished running")
+        // pauses the timer
+        timer.invalidate()
+        hidderView.hidden = false
+
+    }
     
     override func viewDidLoad() {
+        hidderView.hidden = true
         timerLabel.text = "00:00"
         lives = 3
         super.viewDidLoad()

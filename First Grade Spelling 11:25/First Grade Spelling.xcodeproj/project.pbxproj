@@ -17,6 +17,7 @@
 		57BB64831BD41F4A00990F2A /* First_Grade_SpellingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB64821BD41F4A00990F2A /* First_Grade_SpellingTests.swift */; };
 		57BB648D1BD4468200990F2A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BB648C1BD4468200990F2A /* AVFoundation.framework */; };
 		57BB648F1BD44ACE00990F2A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */; };
+		57E2839D1C0B95F000D6D49A /* wrong-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */; };
 		F03EC7441C04D93F00B11665 /* WordEngine.backup in Sources */ = {isa = PBXBuildFile; fileRef = F03EC7431C04D93F00B11665 /* WordEngine.backup */; };
 		F03EC7481C04DA9800B11665 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC7471C04DA9800B11665 /* WordEngine.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		57BB64821BD41F4A00990F2A /* First_Grade_SpellingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_Grade_SpellingTests.swift; sourceTree = "<group>"; };
 		57BB648C1BD4468200990F2A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "wrong-sound.mp3"; sourceTree = "<group>"; };
 		F03EC7431C04D93F00B11665 /* WordEngine.backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WordEngine.backup; sourceTree = "<group>"; };
 		F03EC7471C04DA9800B11665 /* WordEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordEngine.swift; path = ../WordEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		57BB64671BD41F4A00990F2A /* First Grade Spelling */ = {
 			isa = PBXGroup;
 			children = (
+				57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */,
 				F03EC7471C04DA9800B11665 /* WordEngine.swift */,
 				F03EC7431C04D93F00B11665 /* WordEngine.backup */,
 				57BB646A1BD41F4A00990F2A /* AppDelegate.swift */,
@@ -214,6 +217,7 @@
 				57BB64721BD41F4A00990F2A /* Main.storyboard in Resources */,
 				57BB64771BD41F4A00990F2A /* LaunchScreen.xib in Resources */,
 				577A33EE1BEAABC6001FE91D /* SpellingWords.plist in Resources */,
+				57E2839D1C0B95F000D6D49A /* wrong-sound.mp3 in Resources */,
 				57BB64741BD41F4A00990F2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
