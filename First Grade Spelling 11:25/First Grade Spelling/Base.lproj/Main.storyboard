@@ -69,7 +69,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-BO-z4T">
-                                        <rect key="frame" x="559" y="41" width="51" height="21"/>
+                                        <rect key="frame" x="559" y="41" width="51" height="20.5"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="51" id="PRI-aQ-lp2"/>
@@ -99,8 +99,8 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-B6-Kef">
-                                        <rect key="frame" x="70" y="52" width="77" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 words" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-B6-Kef">
+                                        <rect key="frame" x="70" y="51.5" width="66" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -476,6 +476,13 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95S-eZ-NR3">
+                                            <rect key="frame" x="234.5" y="195.5" width="132.5" height="30"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
@@ -483,6 +490,8 @@
                                         <constraint firstItem="RFD-AH-9tB" firstAttribute="centerY" secondItem="lB3-N1-frR" secondAttribute="centerY" id="GqR-lH-v9p"/>
                                         <constraint firstItem="RFD-AH-9tB" firstAttribute="top" secondItem="lB3-N1-frR" secondAttribute="top" constant="168" id="i4C-aV-1ie"/>
                                         <constraint firstItem="RFD-AH-9tB" firstAttribute="centerX" secondItem="lB3-N1-frR" secondAttribute="centerX" id="p9U-CF-nwS"/>
+                                        <constraint firstItem="95S-eZ-NR3" firstAttribute="centerX" secondItem="lB3-N1-frR" secondAttribute="centerX" id="pZh-4K-Asj"/>
+                                        <constraint firstItem="95S-eZ-NR3" firstAttribute="centerY" secondItem="lB3-N1-frR" secondAttribute="centerY" id="tZB-tK-jZm"/>
                                     </constraints>
                                 </view>
                                 <animations/>
@@ -818,6 +827,7 @@
                     <tabBarItem key="tabBarItem" title="Game 1" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="blurView" destination="MIF-h7-Xl1" id="vak-jl-bUx"/>
+                        <outlet property="gameOverLabel" destination="95S-eZ-NR3" id="6Ia-J8-Gag"/>
                         <outlet property="instructions" destination="RFD-AH-9tB" id="qkN-FJ-X9D"/>
                         <outlet property="life1" destination="zrF-Sq-jUC" id="gcF-jR-6Gh"/>
                         <outlet property="life2" destination="DND-LE-qg7" id="dkU-C5-eCe"/>

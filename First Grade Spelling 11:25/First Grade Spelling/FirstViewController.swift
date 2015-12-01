@@ -50,6 +50,7 @@ class FirstViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var instructions: UILabel!
+    @IBOutlet weak var gameOverLabel: UILabel!
     
     
     
@@ -215,12 +216,15 @@ class FirstViewController: UIViewController {
         // pauses the timer
         timer.invalidate()
         blurView.hidden = false
+        gameOverLabel.hidden = false
+        
         
 
     }
     
     override func viewDidLoad() {
         blurView.hidden = false
+        gameOverLabel.hidden = true
         timerLabel.text = "00:00"
         lives = 3
         super.viewDidLoad()
