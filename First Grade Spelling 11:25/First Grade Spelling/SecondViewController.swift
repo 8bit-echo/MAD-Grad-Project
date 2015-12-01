@@ -41,7 +41,14 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func startButton(sender: UIButton) {
+        letterOneOutlet.hidden = true
+        
     }
+    
+    @IBOutlet weak var letterOneOutlet: UIButton!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

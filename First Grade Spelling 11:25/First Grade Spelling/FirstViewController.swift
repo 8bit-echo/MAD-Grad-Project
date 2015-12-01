@@ -47,15 +47,20 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var wordTwoLabel: UIButton!
     @IBOutlet weak var wordThreeLabel: UIButton!
     @IBOutlet weak var startIcon: UIButton!
-    @IBOutlet weak var hidderView: UIView!
-    
     var audioPlayer: AVAudioPlayer?
-  
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var instructions: UILabel!
+    
+    
+    
+    
     
     // Begins the game and chooses a new word to display
     @IBAction func startButton(sender: UIButton) {
-        hidderView.hidden = true
+        blurView.hidden = true
+        instructions.hidden = true
         let buttonLabel = sender as UIButton
+        
         if !timer.valid {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
@@ -73,7 +78,7 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             
             // pause the game
-            hidderView.hidden = false
+            blurView.hidden = false
         }
         updateWords()
         
@@ -82,7 +87,7 @@ class FirstViewController: UIViewController {
     }
     
     
-    // This is the function that runs when a word is chosen by the user ( having a hard time with the resuing of words though.
+    // This is the function that runs when a word is chosen by the user.
     @IBAction func wordChosen(sender: UIButton) {
         if sender.titleLabel?.text == currentGameWord.correctSpelling {
             print("correct value chosen")
@@ -93,7 +98,7 @@ class FirstViewController: UIViewController {
             let scoreString = String(score)
             scoreLabel.text = scoreString + " words"
             
-        }else{
+            }else{
             lives -= 1
             updateLives()
             print("incorrect value chosen")
@@ -105,32 +110,31 @@ class FirstViewController: UIViewController {
             //play wrong answer sound
             let audioFilePath = NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")
             let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-            audioPlayer = try? AVAudioPlayer(contentsOfURL: fileURL)
+            
+            do{
+                let audioPlayer = try AVAudioPlayer(contentsOfURL:fileURL)
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+            }catch {
+                print("Error getting the audio file")
+            }
+    
             if audioPlayer != nil{
                 audioPlayer!.play()
+            }else{
+                
+                print("error playing audio")
             }
-
         }
         
        /* while currentGameWord.hasBeenUsed == true {
             currentGameWord = chooseWord()
         } */
         
-        print("middleButton() has just finished running")
+        print("wordChosen() has just finished running")
     }
     
-
-    //update the words that are displayed in the bubbles
- /*   func updateWords() {
-        wordOneLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
-        wordTwoLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
-        wordThreeLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
-        println("updateWords() has just finished running")
-       // chooseButton()
-    } */
-    
-    
-    
+    // This function takes the SpellingWord object from chooseWord() and maps it's properties to random bubbles
     func updateWords() {
         //choose a random number between 1 and 3
         let randomNumber = arc4random_uniform(3) + 1
@@ -156,10 +160,9 @@ class FirstViewController: UIViewController {
             break
         }
         print("updateWords() has just finished running")
+        
     }
 
-    
-    
     //Timer begins counting
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
@@ -203,19 +206,21 @@ class FirstViewController: UIViewController {
         }
         
         print("updateLives() has finished running")
-        print(lives)
+        print("\(lives) lives remaining")
     }
 
+    //Ends the current game
     func endGame(){
         print("endGame function just finished running")
         // pauses the timer
         timer.invalidate()
-        hidderView.hidden = false
+        blurView.hidden = false
+        
 
     }
     
     override func viewDidLoad() {
-        hidderView.hidden = true
+        blurView.hidden = false
         timerLabel.text = "00:00"
         lives = 3
         super.viewDidLoad()
@@ -325,8 +330,6 @@ class FirstViewController: UIViewController {
         myDictionaryArray.append(spellYes)
  
     }
-
-
 
 }
 
