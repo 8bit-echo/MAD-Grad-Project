@@ -55,7 +55,7 @@ class FirstViewController: UIViewController {
     // Begins the game and chooses a new word to display
     @IBAction func startButton(sender: UIButton) {
         hidderView.hidden = true
-        var buttonLabel = sender as UIButton
+        let buttonLabel = sender as UIButton
         if !timer.valid {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
@@ -77,7 +77,7 @@ class FirstViewController: UIViewController {
         }
         updateWords()
         
-        println("startButton() has just finished running")
+        print("startButton() has just finished running")
         
     }
     
@@ -85,18 +85,18 @@ class FirstViewController: UIViewController {
     // This is the function that runs when a word is chosen by the user ( having a hard time with the resuing of words though.
     @IBAction func wordChosen(sender: UIButton) {
         if sender.titleLabel?.text == currentGameWord.correctSpelling {
-            println("correct value chosen")
+            print("correct value chosen")
             currentGameWord = chooseWord()
             updateWords()
             currentGameWord.hasBeenUsed = true
             score += 1
-            var scoreString = String(score)
+            let scoreString = String(score)
             scoreLabel.text = scoreString + " words"
             
         }else{
             lives -= 1
             updateLives()
-            println("incorrect value chosen")
+            print("incorrect value chosen")
            /* commented these out so that the user has to get the correct answer before moving on to the next word
             currentGameWord = chooseWord()
             updateWords() */
@@ -105,7 +105,7 @@ class FirstViewController: UIViewController {
             //play wrong answer sound
             let audioFilePath = NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")
             let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-            audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+            audioPlayer = try? AVAudioPlayer(contentsOfURL: fileURL)
             if audioPlayer != nil{
                 audioPlayer!.play()
             }
@@ -116,7 +116,7 @@ class FirstViewController: UIViewController {
             currentGameWord = chooseWord()
         } */
         
-        println("middleButton() has just finished running")
+        print("middleButton() has just finished running")
     }
     
 
@@ -133,11 +133,11 @@ class FirstViewController: UIViewController {
     
     func updateWords() {
         //choose a random number between 1 and 3
-        var randomNumber = arc4random_uniform(3) + 1
+        let randomNumber = arc4random_uniform(3) + 1
         
         // just for testing
-        var randomNumberString = String(randomNumber)
-        println("random number: " + randomNumberString)
+        let randomNumberString = String(randomNumber)
+        print("random number: " + randomNumberString)
         
         switch randomNumber{
         case 1:
@@ -155,14 +155,14 @@ class FirstViewController: UIViewController {
         default:
             break
         }
-        println("updateWords() has just finished running")
+        print("updateWords() has just finished running")
     }
 
     
     
     //Timer begins counting
     func updateTime() {
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
         let minutes = UInt8(elapsedTime/60)
         elapsedTime -= (NSTimeInterval(minutes)*60)
@@ -195,19 +195,19 @@ class FirstViewController: UIViewController {
             life1.image = UIImage(named: "empty.png")
             life2.image = UIImage(named: "empty.png")
             life3.image = UIImage(named: "empty.png")
-            println("game over")
+            print("game over")
             //stop the timer somehow
             endGame()
         default:
             break
         }
         
-        println("updateLives() has finished running")
-        println(lives)
+        print("updateLives() has finished running")
+        print(lives)
     }
 
     func endGame(){
-        println("endGame function just finished running")
+        print("endGame function just finished running")
         // pauses the timer
         timer.invalidate()
         hidderView.hidden = false

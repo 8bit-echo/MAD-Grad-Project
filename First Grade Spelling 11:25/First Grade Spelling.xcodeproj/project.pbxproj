@@ -18,7 +18,6 @@
 		57BB648D1BD4468200990F2A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BB648C1BD4468200990F2A /* AVFoundation.framework */; };
 		57BB648F1BD44ACE00990F2A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */; };
 		57E2839D1C0B95F000D6D49A /* wrong-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */; };
-		F03EC7441C04D93F00B11665 /* WordEngine.backup in Sources */ = {isa = PBXBuildFile; fileRef = F03EC7431C04D93F00B11665 /* WordEngine.backup */; };
 		F03EC7481C04DA9800B11665 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EC7471C04DA9800B11665 /* WordEngine.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		57BB648C1BD4468200990F2A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57BB648E1BD44ACE00990F2A /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "wrong-sound.mp3"; sourceTree = "<group>"; };
-		F03EC7431C04D93F00B11665 /* WordEngine.backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WordEngine.backup; sourceTree = "<group>"; };
 		F03EC7471C04DA9800B11665 /* WordEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordEngine.swift; path = ../WordEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +93,6 @@
 			children = (
 				57E2839C1C0B95F000D6D49A /* wrong-sound.mp3 */,
 				F03EC7471C04DA9800B11665 /* WordEngine.swift */,
-				F03EC7431C04D93F00B11665 /* WordEngine.backup */,
 				57BB646A1BD41F4A00990F2A /* AppDelegate.swift */,
 				57BB646C1BD41F4A00990F2A /* FirstViewController.swift */,
 				57BB646E1BD41F4A00990F2A /* SecondViewController.swift */,
@@ -180,7 +177,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Megan Leahy";
 				TargetAttributes = {
 					57BB64641BD41F4A00990F2A = {
@@ -239,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BB646F1BD41F4A00990F2A /* SecondViewController.swift in Sources */,
-				F03EC7441C04D93F00B11665 /* WordEngine.backup in Sources */,
 				57BB646B1BD41F4A00990F2A /* AppDelegate.swift in Sources */,
 				F03EC7481C04DA9800B11665 /* WordEngine.swift in Sources */,
 				57BB648F1BD44ACE00990F2A /* ThirdViewController.swift in Sources */,
@@ -306,6 +302,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -373,7 +370,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "First Grade Spelling/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TAM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -383,7 +382,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "First Grade Spelling/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TAM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -402,6 +403,7 @@
 				);
 				INFOPLIST_FILE = "First Grade SpellingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TAM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/First Grade Spelling.app/First Grade Spelling";
 			};
@@ -417,6 +419,7 @@
 				);
 				INFOPLIST_FILE = "First Grade SpellingTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TAM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/First Grade Spelling.app/First Grade Spelling";
 			};
