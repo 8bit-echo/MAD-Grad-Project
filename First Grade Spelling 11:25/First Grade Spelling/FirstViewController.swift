@@ -11,15 +11,6 @@ import AVFoundation
 
 var myDictionaryArray = [SpellingWord]()
 
-//choose a random word from the dictionary
-func chooseWord()  -> SpellingWord {
-    
-    let randomIndex = Int(arc4random_uniform(UInt32(myDictionaryArray.count)))
-    let randomItem = myDictionaryArray[randomIndex]
-    
-    return randomItem
-}
-
 //stores the current word being displayed in the bubbles
 var currentGameWord = chooseWord()
 
@@ -68,6 +59,7 @@ class FirstViewController: UIViewController {
             startTimeDate = NSDate()
             startTime = NSDate.timeIntervalSinceReferenceDate() + elapsedTime
             buttonLabel.setTitle("Pause", forState: UIControlState.Normal)
+            gameOverLabel.hidden = true
             //buttonLabel.setImage(UIImage(named: "pause-button"), forState: UIControlState.Normal)
             
             // start the game
@@ -332,7 +324,6 @@ class FirstViewController: UIViewController {
         myDictionaryArray.append(spellOne)
         myDictionaryArray.append(spellSit)
         myDictionaryArray.append(spellYes)
- 
     }
 
 }

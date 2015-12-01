@@ -108,7 +108,7 @@ if convertedArray == wordToShuffle {
 }
 
 
-
+var numChar = currentGameWord.correctSpelling.characters.count
 
 
 
