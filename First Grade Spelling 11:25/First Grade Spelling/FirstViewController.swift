@@ -39,28 +39,17 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var wordThreeLabel: UIButton!
     @IBOutlet weak var startIcon: UIButton!
     var audioPlayer: AVAudioPlayer?
-<<<<<<< HEAD
     @IBOutlet weak var hideView: UIView!
     @IBOutlet weak var instructions: UILabel!
     @IBOutlet weak var gameOverHideView: UIView!
     @IBOutlet weak var correctImage: UIImageView!
-=======
-    @IBOutlet weak var blurView: UIVisualEffectView!
-    @IBOutlet weak var instructions: UILabel!
-    @IBOutlet weak var gameOverLabel: UILabel!
-    
->>>>>>> origin/master
     
     
     
     
     // Begins the game and chooses a new word to display
     @IBAction func startButton(sender: UIButton) {
-<<<<<<< HEAD
         hideView.hidden = true
-=======
-        blurView.hidden = true
->>>>>>> origin/master
         instructions.hidden = true
         let buttonLabel = sender as UIButton
         
@@ -70,7 +59,6 @@ class FirstViewController: UIViewController {
             startTimeDate = NSDate()
             startTime = NSDate.timeIntervalSinceReferenceDate() + elapsedTime
             buttonLabel.setTitle("Pause", forState: UIControlState.Normal)
-            gameOverLabel.hidden = true
             //buttonLabel.setImage(UIImage(named: "pause-button"), forState: UIControlState.Normal)
             
             // start the game
@@ -82,11 +70,7 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             
             // pause the game
-<<<<<<< HEAD
             hideView.hidden = false
-=======
-            blurView.hidden = false
->>>>>>> origin/master
         }
         updateWords()
         
@@ -119,7 +103,6 @@ class FirstViewController: UIViewController {
             correctImage.hidden = true
             
             //play wrong answer sound
-<<<<<<< HEAD
             do{
                 self.audioPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")!))
                 self.audioPlayer!.play()
@@ -127,25 +110,6 @@ class FirstViewController: UIViewController {
                 print("Error getting the audio file")
             }
     
-=======
-            let audioFilePath = NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")
-            let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-            
-            do{
-                let audioPlayer = try AVAudioPlayer(contentsOfURL:fileURL)
-                audioPlayer.prepareToPlay()
-                audioPlayer.play()
-            }catch {
-                print("Error getting the audio file")
-            }
-    
-            if audioPlayer != nil{
-                audioPlayer!.play()
-            }else{
-                
-                print("error playing audio")
-            }
->>>>>>> origin/master
         }
         
        /* while currentGameWord.hasBeenUsed == true {
@@ -235,24 +199,11 @@ class FirstViewController: UIViewController {
         print("endGame function just finished running")
         // pauses the timer
         timer.invalidate()
-<<<<<<< HEAD
         gameOverHideView.hidden = false
     }
     
     override func viewDidLoad() {
         hideView.hidden = false
-=======
-        blurView.hidden = false
-        gameOverLabel.hidden = false
-        
-        
-
-    }
-    
-    override func viewDidLoad() {
-        blurView.hidden = false
-        gameOverLabel.hidden = true
->>>>>>> origin/master
         timerLabel.text = "00:00"
         lives = 3
         super.viewDidLoad()
