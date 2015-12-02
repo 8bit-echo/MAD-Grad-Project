@@ -92,25 +92,33 @@ extension MutableCollectionType where Index == Int {
 var wordToShuffle = currentGameWord.correctSpelling
 var shuffledWord = Array(wordToShuffle.characters).shuffle()
 
+//Make the shuffled word a readable string
+var convertedArray = String(shuffledWord)
+
+
+
+//USER REARRANGES WORDS HERE
+
+
+
+if convertedArray == wordToShuffle {
+    print("Hooray! You spelled it correctly.")
+}else{
+    print("You lose, stupid First Grader.")
+}
+
+
+var numChar = currentGameWord.correctSpelling.characters.count
+
+
+
+
+
+
 //Assign index of each character to the proper UIElement.
 //Hide or add UIButtons based on length of the word
 
 
-
-//FALLBACK FOR SHUFFLE ON iOS 8
-/*
-
-func shuffle<C: MutableCollectionType where C.Index == Int>(var list: C) -> C {
-let c = count(list)
-if c < 2 { return list }
-for i in 0..<(c - 1) {
-let j = Int(arc4random_uniform(UInt32(c - i))) + i
-swap(&list[i], &list[j])
-}
-return list
-}
-
-*/
 
 
 

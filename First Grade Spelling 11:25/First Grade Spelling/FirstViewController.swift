@@ -11,15 +11,6 @@ import AVFoundation
 
 var myDictionaryArray = [SpellingWord]()
 
-//choose a random word from the dictionary
-func chooseWord()  -> SpellingWord {
-    
-    let randomIndex = Int(arc4random_uniform(UInt32(myDictionaryArray.count)))
-    let randomItem = myDictionaryArray[randomIndex]
-    
-    return randomItem
-}
-
 //stores the current word being displayed in the bubbles
 var currentGameWord = chooseWord()
 
@@ -47,15 +38,21 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var wordTwoLabel: UIButton!
     @IBOutlet weak var wordThreeLabel: UIButton!
     @IBOutlet weak var startIcon: UIButton!
-    @IBOutlet weak var hidderView: UIView!
-    
     var audioPlayer: AVAudioPlayer?
-  
+    @IBOutlet weak var hideView: UIView!
+    @IBOutlet weak var instructions: UILabel!
+    @IBOutlet weak var gameOverHideView: UIView!
+    @IBOutlet weak var correctImage: UIImageView!
+    
+    
+    
     
     // Begins the game and chooses a new word to display
     @IBAction func startButton(sender: UIButton) {
-        hidderView.hidden = true
-        var buttonLabel = sender as UIButton
+        hideView.hidden = true
+        instructions.hidden = true
+        let buttonLabel = sender as UIButton
+        
         if !timer.valid {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
@@ -73,71 +70,63 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             
             // pause the game
-            hidderView.hidden = false
+            hideView.hidden = false
         }
         updateWords()
         
-        println("startButton() has just finished running")
+        print("startButton() has just finished running")
         
     }
     
     
-    // This is the function that runs when a word is chosen by the user ( having a hard time with the resuing of words though.
+    // This is the function that runs when a word is chosen by the user.
     @IBAction func wordChosen(sender: UIButton) {
         if sender.titleLabel?.text == currentGameWord.correctSpelling {
-            println("correct value chosen")
+            print("correct value chosen")
             currentGameWord = chooseWord()
             updateWords()
             currentGameWord.hasBeenUsed = true
             score += 1
-            var scoreString = String(score)
+            let scoreString = String(score)
             scoreLabel.text = scoreString + " words"
+            correctImage.hidden = false
             
-        }else{
+            }else{
             lives -= 1
             updateLives()
-            println("incorrect value chosen")
+            print("incorrect value chosen")
            /* commented these out so that the user has to get the correct answer before moving on to the next word
             currentGameWord = chooseWord()
             updateWords() */
             currentGameWord.hasBeenUsed = true
             
+            correctImage.hidden = true
+            
             //play wrong answer sound
-            let audioFilePath = NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")
-            let fileURL = NSURL(fileURLWithPath: audioFilePath!)
-            audioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
-            if audioPlayer != nil{
-                audioPlayer!.play()
+            do{
+                self.audioPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("wrong-sound", ofType: "mp3")!))
+                self.audioPlayer!.play()
+            }catch {
+                print("Error getting the audio file")
             }
-
+    
         }
         
        /* while currentGameWord.hasBeenUsed == true {
             currentGameWord = chooseWord()
         } */
         
-        println("middleButton() has just finished running")
+        print("wordChosen() has just finished running")
     }
     
-
-    //update the words that are displayed in the bubbles
- /*   func updateWords() {
-        wordOneLabel.setTitle(currentGameWord.incorrectSpelling, forState: UIControlState.Normal)
-        wordTwoLabel.setTitle(currentGameWord.correctSpelling, forState: UIControlState.Normal)
-        wordThreeLabel.setTitle(currentGameWord.altIncorrectSpelling, forState: UIControlState.Normal)
-        println("updateWords() has just finished running")
-       // chooseButton()
-    } */
-    
-    
-    
+    // This function takes the SpellingWord object from chooseWord() and maps it's properties to random bubbles
     func updateWords() {
         //choose a random number between 1 and 3
-        var randomNumber = arc4random_uniform(3) + 1
+        let randomNumber = arc4random_uniform(3) + 1
         
         // just for testing
-        var randomNumberString = String(randomNumber)
-        println("random number: " + randomNumberString)
+        let randomNumberString = String(randomNumber)
+        print("random number: " + randomNumberString)
         
         switch randomNumber{
         case 1:
@@ -155,14 +144,13 @@ class FirstViewController: UIViewController {
         default:
             break
         }
-        println("updateWords() has just finished running")
+        print("updateWords() has just finished running")
+        
     }
 
-    
-    
     //Timer begins counting
     func updateTime() {
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
         var elapsedTime: NSTimeInterval = currentTime - startTime
         let minutes = UInt8(elapsedTime/60)
         elapsedTime -= (NSTimeInterval(minutes)*60)
@@ -195,27 +183,27 @@ class FirstViewController: UIViewController {
             life1.image = UIImage(named: "empty.png")
             life2.image = UIImage(named: "empty.png")
             life3.image = UIImage(named: "empty.png")
-            println("game over")
+            print("game over")
             //stop the timer somehow
             endGame()
         default:
             break
         }
         
-        println("updateLives() has finished running")
-        println(lives)
+        print("updateLives() has finished running")
+        print("\(lives) lives remaining")
     }
 
+    //Ends the current game
     func endGame(){
-        println("endGame function just finished running")
+        print("endGame function just finished running")
         // pauses the timer
         timer.invalidate()
-        hidderView.hidden = false
-
+        gameOverHideView.hidden = false
     }
     
     override func viewDidLoad() {
-        hidderView.hidden = true
+        hideView.hidden = false
         timerLabel.text = "00:00"
         lives = 3
         super.viewDidLoad()
@@ -323,10 +311,7 @@ class FirstViewController: UIViewController {
         myDictionaryArray.append(spellOne)
         myDictionaryArray.append(spellSit)
         myDictionaryArray.append(spellYes)
- 
     }
-
-
 
 }
 
