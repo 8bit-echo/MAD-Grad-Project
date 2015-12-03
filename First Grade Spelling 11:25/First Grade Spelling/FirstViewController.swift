@@ -59,13 +59,11 @@ class FirstViewController: UIViewController {
             startTimeDate = NSDate()
             startTime = NSDate.timeIntervalSinceReferenceDate() + elapsedTime
             buttonLabel.setTitle("Pause", forState: UIControlState.Normal)
-            //buttonLabel.setImage(UIImage(named: "pause-button"), forState: UIControlState.Normal)
             
             // start the game
             
         } else {
             buttonLabel.setTitle("Play", forState: UIControlState.Normal)
-            //buttonLabel.setImage(UIImage(named: "play-button"), forState: UIControlState.Normal)
             elapsedTime += startTimeDate.timeIntervalSinceNow
             timer.invalidate()
             
@@ -200,6 +198,12 @@ class FirstViewController: UIViewController {
         // pauses the timer
         timer.invalidate()
         gameOverHideView.hidden = false
+    }
+    
+    @IBAction func playAgainButton(sender: UIButton) {
+        loadView()
+        lives = 3
+        score = 0
     }
     
     override func viewDidLoad() {

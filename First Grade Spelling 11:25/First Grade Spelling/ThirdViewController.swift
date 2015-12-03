@@ -33,12 +33,11 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var correctImage: UIImageView!
-    
-    // set a life to hidden when an incorrect answer is given
     @IBOutlet weak var life1: UIImageView!
     @IBOutlet weak var life2: UIImageView!
     @IBOutlet weak var life3: UIImageView!
     @IBOutlet weak var hideView: UIView!
+    @IBOutlet weak var instructions: UITextView!
     @IBOutlet weak var gameOverHideView: UIView!
     
     @IBOutlet weak var userGuesses: UILabel!
@@ -94,11 +93,14 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func nextButton(sender: UIButton) {
         chooseWord() // this isn't working to choose another word
+        currentGame3Word = chooseWord()
         correctImage.hidden = true
+        print("next button just finished running")
     }
     
     @IBAction func startButton(sender: UIButton) {
         hideView.hidden = true
+        instructions.hidden = true
         let buttonLabel = sender as UIButton
         
         if !timer.valid {
@@ -174,10 +176,15 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
         // pauses the timer
         timer.invalidate()
         gameOverHideView.hidden = false
-        
-        
-        
     }
+    
+    @IBAction func playAgainButton(sender: UIButton) {
+        loadView()
+        viewDidLoad()
+        lives3 = 3
+        score3 = 0
+    }
+    
     
     override func viewDidLoad() {
         userEnteredWord.delegate = self
