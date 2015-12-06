@@ -89,7 +89,8 @@ class FirstViewController: UIViewController {
             scoreLabel.text = scoreString + " words"
             correctImage.hidden = false
             
-            }else{
+            }
+        else{
             lives -= 1
             updateLives()
             print("incorrect value chosen")
