@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1981,19 +1981,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeX-CA-zXS">
                                 <rect key="frame" x="0.0" y="134" width="600" height="417"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap the speaker to listen to the word. Then tap each letter to spell the word." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-Ne-PDA">
-                                        <rect key="frame" x="180" y="42" width="240" height="90"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="WDQ-ev-ehG"/>
-                                            <constraint firstAttribute="height" constant="90" id="eml-qf-k61"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.062745098039215685" green="0.16470588235294117" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8U-fZ-GkM">
-                                        <rect key="frame" x="206" y="187" width="190" height="43"/>
+                                        <rect key="frame" x="206" y="187" width="189.5" height="43"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <color key="textColor" red="0.062745098040000002" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -2014,18 +2003,36 @@
                                             <action selector="playAgain:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Suh-xU-seU"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the speaker to listen to the word. Then tap each tile to spell it." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tJg-Sd-wNK">
+                                        <rect key="frame" x="180" y="60" width="240" height="72"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="bQu-Z5-8UT"/>
+                                            <constraint firstAttribute="height" constant="72" id="te8-Pa-TGk"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.11764705882352941" green="0.17254901960784313" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.22251554821648842" green="0.68676726259198306" blue="0.72017927436125961" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="m8U-fZ-GkM" firstAttribute="centerY" secondItem="OeX-CA-zXS" secondAttribute="centerY" id="Bry-pS-ASU"/>
                                     <constraint firstItem="m8U-fZ-GkM" firstAttribute="centerX" secondItem="OeX-CA-zXS" secondAttribute="centerX" constant="1" id="CzH-5b-MSl"/>
-                                    <constraint firstItem="xF1-Ne-PDA" firstAttribute="centerX" secondItem="OeX-CA-zXS" secondAttribute="centerX" id="QFa-Wl-vQb"/>
+                                    <constraint firstItem="tJg-Sd-wNK" firstAttribute="centerX" secondItem="OeX-CA-zXS" secondAttribute="centerX" id="Pu3-4G-UAa"/>
                                     <constraint firstItem="R5D-Yc-Nmj" firstAttribute="centerX" secondItem="OeX-CA-zXS" secondAttribute="centerX" id="kxT-rc-AR8"/>
-                                    <constraint firstItem="xF1-Ne-PDA" firstAttribute="top" secondItem="OeX-CA-zXS" secondAttribute="top" constant="42" id="ok2-D9-PBO"/>
+                                    <constraint firstItem="tJg-Sd-wNK" firstAttribute="top" secondItem="OeX-CA-zXS" secondAttribute="top" constant="60" id="yXY-Vv-4ZQ"/>
                                     <constraint firstItem="R5D-Yc-Nmj" firstAttribute="top" secondItem="m8U-fZ-GkM" secondAttribute="bottom" constant="8" id="yhN-W4-7aK"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="ooQ-hi-WSB">
+                                <rect key="frame" x="217" y="210" width="227" height="273"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ooQ-hi-WSB" secondAttribute="height" multiplier="227:273" id="2rw-bE-GLr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.18035164931159411" green="0.68560317555897132" blue="0.71895424836601296" alpha="1" colorSpace="calibratedRGB"/>
@@ -2039,6 +2046,7 @@
                             <constraint firstItem="eAD-Uc-f4M" firstAttribute="leading" secondItem="idm-Jp-K8X" secondAttribute="trailing" constant="15" id="BeF-hV-Qvy"/>
                             <constraint firstItem="6QO-In-Mt6" firstAttribute="top" secondItem="Pn3-om-RUD" secondAttribute="bottom" constant="17" id="Gf3-XD-pP9"/>
                             <constraint firstItem="FEh-jS-clV" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="IL0-40-o0C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ooQ-hi-WSB" secondAttribute="trailing" constant="136" id="IX5-iB-YqV"/>
                             <constraint firstItem="4ne-uY-R4H" firstAttribute="leading" secondItem="FEh-jS-clV" secondAttribute="trailing" constant="8" id="IpZ-oF-vcF"/>
                             <constraint firstItem="idm-Jp-K8X" firstAttribute="leading" secondItem="6QO-In-Mt6" secondAttribute="trailing" constant="19" id="KOE-Gn-xz9"/>
                             <constraint firstItem="FEh-jS-clV" firstAttribute="leading" secondItem="eAD-Uc-f4M" secondAttribute="trailing" constant="8" id="Kzu-rc-Sen"/>
@@ -2077,6 +2085,7 @@
                             <constraint firstItem="idm-Jp-K8X" firstAttribute="top" secondItem="N0c-uP-80N" secondAttribute="bottom" constant="53" id="kKM-51-4w9"/>
                             <constraint firstItem="FEh-jS-clV" firstAttribute="leading" secondItem="eAD-Uc-f4M" secondAttribute="trailing" constant="8" id="kUV-3a-wRy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OeX-CA-zXS" secondAttribute="trailing" constant="-20" id="lmJ-KL-QCN"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ooQ-hi-WSB" secondAttribute="bottom" constant="68" id="nIq-Ka-YUL"/>
                             <constraint firstAttribute="centerY" secondItem="eAD-Uc-f4M" secondAttribute="centerY" id="qEz-OP-g7J">
                                 <variation key="heightClass=compact-widthClass=compact" constant="-20"/>
                             </constraint>
@@ -2142,12 +2151,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Game 2" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Game 2" image="second-tab" id="cPa-gy-q4n"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="birdImage" destination="ooQ-hi-WSB" id="BzA-Xp-8Oh"/>
                         <outlet property="gameOverText" destination="m8U-fZ-GkM" id="7Mt-nX-Sry"/>
                         <outlet property="hideView" destination="OeX-CA-zXS" id="V6P-4U-UOn"/>
-                        <outlet property="instructions" destination="xF1-Ne-PDA" id="D3r-Xl-VNF"/>
+                        <outlet property="instructions" destination="tJg-Sd-wNK" id="qUx-jC-STA"/>
                         <outlet property="letterFourTile" destination="4ne-uY-R4H" id="Ga3-i4-cqz"/>
                         <outlet property="letterOneTile" destination="idm-Jp-K8X" id="bV4-Le-1pa"/>
                         <outlet property="letterThreeTile" destination="FEh-jS-clV" id="zm0-OY-XkQ"/>
@@ -2162,32 +2172,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="f4E-6D-xpm">
-                    <connections>
-                        <action selector="letterOneMoved:" destination="8rJ-Kc-sve" id="uaK-8j-adv"/>
-                        <outlet property="delegate" destination="8rJ-Kc-sve" id="AmE-Yw-CMn"/>
-                    </connections>
-                </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="c3q-th-IqF">
-                    <connections>
-                        <action selector="letterTwoMoved:" destination="8rJ-Kc-sve" id="ZGE-0S-Aab"/>
-                        <outlet property="delegate" destination="8rJ-Kc-sve" id="VWJ-3c-LLE"/>
-                    </connections>
-                </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Sfw-Ze-CEN">
-                    <connections>
-                        <action selector="letterThreeMoved:" destination="8rJ-Kc-sve" id="C9O-4w-JTl"/>
-                        <outlet property="delegate" destination="8rJ-Kc-sve" id="0Jc-7h-WMS"/>
-                    </connections>
-                </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Z3j-Kn-kZw">
-                    <connections>
-                        <action selector="letterFourMoved:" destination="8rJ-Kc-sve" id="CJx-aU-2EG"/>
-                        <outlet property="delegate" destination="8rJ-Kc-sve" id="4m2-1N-un2"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="816" y="0.0"/>
+            <point key="canvasLocation" x="823" y="0.0"/>
         </scene>
         <!--Game 3-->
         <scene sceneID="wsq-nx-Kl0">
@@ -3329,6 +3315,7 @@
     </scenes>
     <resources>
         <image name="arrow" width="73" height="54"/>
+        <image name="bird" width="222" height="273"/>
         <image name="bubble" width="226" height="226"/>
         <image name="clock" width="47" height="47"/>
         <image name="coins" width="40" height="42"/>
@@ -3336,7 +3323,7 @@
         <image name="fish" width="231" height="160"/>
         <image name="heart" width="37" height="36"/>
         <image name="monkey" width="243" height="268"/>
-        <image name="second" width="30" height="30"/>
+        <image name="second-tab" width="47" height="60"/>
         <image name="speaker" width="80" height="88"/>
         <image name="third-tab" width="75" height="58"/>
     </resources>

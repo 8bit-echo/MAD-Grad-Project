@@ -15,8 +15,6 @@ var game2Score = 0
 //Choose a new word from the dictionary for this game
 var currentGame2Word = chooseWord()
 
-
-
 class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var life1: UIImageView!
@@ -33,6 +31,7 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var instructions: UITextView!
     @IBOutlet weak var gameOverText: UILabel!
     @IBOutlet weak var playAgainText: UIButton!
+    @IBOutlet weak var birdImage: UIImageView!
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     var startTimeDate = NSDate()
@@ -151,12 +150,16 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
             userInputLabel.textColor = UIColor.greenColor()
             self.scoreLabel.text = String(++game2Score) + " words"
             if game2Score == 1{ self.scoreLabel.text = String(game2Score) + " word"}
+            birdImage.hidden = false
+            
             
             delay(0.75){
                 currentGame2Word = chooseWord()
                 self.updateTiles()
                 self.userInputLabel.text = ""
                 self.userInputLabel.textColor = UIColor.whiteColor()
+                self.birdImage.hidden = true
+                
                 print("Correct word has been spelled")
             }
             
@@ -164,6 +167,8 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
             // do Nothing
             print("Still waiting for correct spelling")
         }
+        
+        // User used all letters and spelling is incorrect
         
         if userAnswer != correctAnswer && userAnswer!.characters.count == correctAnswer.characters.count {
             
@@ -245,11 +250,14 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
         instructions.hidden = true
         gameOverText.hidden = false
         playAgainText.hidden = false
+        birdImage.hidden = true
+        
+        
         
         print("endGame() has just finished running")
     }
     
-
+    // Option to replay game
     @IBAction func playAgain(sender: UIButton) {
         loadView()
         viewDidLoad()
@@ -266,6 +274,8 @@ class SecondViewController: UIViewController, UIGestureRecognizerDelegate {
         scoreLabel.text = String(game2Score) + " words"
         gameOverText.hidden = true
         playAgainText.hidden =  true
+        birdImage.hidden = true
+        
     }
 }
 
