@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93C79D57BD08111AA6F11F9AF01233F065C9063A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93C79D57BD08111AA6F11F9AF01233F065C9063A" : 0,
+    "A078AC243CACC6A8E3B269EC3EA6A8B897998649" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2D92C239-1FA6-4F39-B633-9B405BD7DCB1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93C79D57BD08111AA6F11F9AF01233F065C9063A" : "MAD-Grad-Project\/",
+    "A078AC243CACC6A8E3B269EC3EA6A8B897998649" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Game 1 Playground",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "First Grade Spelling\/Game 1 Playground.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dick-ey\/MAD-Grad-Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93C79D57BD08111AA6F11F9AF01233F065C9063A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dick-ey\/Mobile-App-Dev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A078AC243CACC6A8E3B269EC3EA6A8B897998649"
+    }
+  ]
+}
